@@ -1,10 +1,7 @@
 ## Overview
 This lab will guide you through creating a VPC and implementing network segmentation. By the end of the exercise, your VPC will include 2 public subnets and 2 private subnets.
 
-
 ![](https://sb-next-prod-image-bucket.s3.ap-southeast-1.amazonaws.com/public/CAMP/Session1/Lab0/image0-1.png)
-
-
 
 ##  1 Setup VPC
 
@@ -22,24 +19,19 @@ This lab will guide you through creating a VPC and implementing network segmenta
 
 1-d. Your **VPC** has been successfully created.
 
-
 ![](https://sb-next-prod-image-bucket.s3.ap-southeast-1.amazonaws.com/public/CAMP/Labs2025/Session1/Lab0/image-5.png)
-
 
 ## 2. Set Up Private Subnets
 
 2-a. Go to **Subnets** and click **Create Subnet**.
 
-
 ![](https://sb-next-prod-image-bucket.s3.ap-southeast-1.amazonaws.com/public/CAMP/Labs2025/Session1/Lab0/image-6.png)
-
 
 2-b. Create a **private subnet**:
 - Choose your **VPC**.
 - Name the subnet "**Private Subnet A**."
 - Assign it **a /24 CIDR block**.
 - Pick an **Availability Zone (AZ)**.
-
 
 ![](https://sb-next-prod-image-bucket.s3.ap-southeast-1.amazonaws.com/public/CAMP/Labs2025/Session1/Lab0/image-7.png)
 
@@ -58,9 +50,7 @@ This lab will guide you through creating a VPC and implementing network segmenta
 - Select an AZ different from **Private Subnet A.**
 - You now have two private subnets.
 
-
 ![](https://sb-next-prod-image-bucket.s3.ap-southeast-1.amazonaws.com/public/CAMP/Labs2025/Session1/Lab0/image-11.png)
-
 
 ## 3. Setup an Internet Gateway
 3-a. To enable internet connectivity for public subnets, first **create an Internet Gateway (IGW)**. Go to **Internet Gateway **and click** Create Internet Gateway**.
@@ -105,15 +95,12 @@ This lab will guide you through creating a VPC and implementing network segmenta
 - Select the **route table** and go to the **Routes tab**.
 - Click the **Edit Routes** button.
 
-
 ![](https://sb-next-prod-image-bucket.s3.ap-southeast-1.amazonaws.com/public/CAMP/Labs2025/Session1/Lab0/image-19.png)
-
 
 - Add a route with:
 - **Destination: 0.0.0.0/0**
 - **Target: Your Internet Gateway.**
 - **Save** the changes.
-
 
 ![](https://sb-next-prod-image-bucket.s3.ap-southeast-1.amazonaws.com/public/CAMP/Labs2025/Session1/Lab0/image-20.png)
 
@@ -124,7 +111,6 @@ This lab will guide you through creating a VPC and implementing network segmenta
 4-d. Associate the public subnets with the route table:
 - Go to the **Subnet Associations** tab in the route table.
 - Click **Edit Subnet Associations** and select your **public subnets.**
-
 
 ![](https://sb-next-prod-image-bucket.s3.ap-southeast-1.amazonaws.com/public/CAMP/Labs2025/Session1/Lab0/image-23.png)
 
@@ -149,7 +135,6 @@ This lab will guide you through creating a VPC and implementing network segmenta
 **JSON Output**
 
 Copy and fill in the JSON template below with the resource IDs from your setup, then paste it in the provided text box:
-
 
 ```
 {
