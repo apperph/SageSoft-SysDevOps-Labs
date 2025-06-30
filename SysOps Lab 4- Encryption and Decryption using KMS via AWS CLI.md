@@ -37,7 +37,13 @@ Navigate to the AWS KMS console to confirm the alias (alias/apper-demo) is assoc
 
 Run the following command to generate a data key using the CMK:
 
+for MacOs
+
 `aws kms generate-data-key --key-id alias/<your alias here> --key-spec AES_256 --region ap-southeast-1`
+
+for Powershell
+
+`New-KMSDataKey -KeyId alias/apper-charles -KeySpec AES_256 -Region ap-southeast-1`
 
 The response includes:
 
