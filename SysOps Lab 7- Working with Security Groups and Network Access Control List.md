@@ -40,7 +40,7 @@ Obtain the **public IP address** of the bastion host and establish an SSH connec
 
 2-b. Since the **PEM key** has already been **added** to the **SSH agent**, you can now connect to the **bastion** host by simply running the following command and pressing Enter:
 
-`ssh -A ec2-user@<public-ip>`
+`ssh -A -i ~/Downloads/<pem file name> ec2-user@<your public IP>`
 
 
 ![](https://sb-next-prod-image-bucket.s3.ap-southeast-1.amazonaws.com/public/CAMP/Labs2025/Session1/Lab2/image-5.png)
