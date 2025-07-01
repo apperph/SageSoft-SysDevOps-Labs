@@ -35,12 +35,15 @@ Obtain the **public IP address** of the bastion host and establish an SSH connec
 2-a. Open your **CLI** application and navigate to the directory where your **PEM** key is located. Then, type the following command and press Enter:
 
 `#Start SSH agent`
+
 `eval "$(ssh-agent -s)"`
 
 `#Add the key`
+
 `ssh-add ~/Downloads/charles-new-kp1.pem`
 
 `#Test SSH connection`
+
 `ssh -i ~/Downloads/charles-new-kp1.pem ec2-user@52.207.231.65`
 
 ![](https://sb-next-prod-image-bucket.s3.ap-southeast-1.amazonaws.com/public/CAMP/Labs2025/Session1/Lab2/image-4.png)
